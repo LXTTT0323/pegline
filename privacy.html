@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私说明 · 晾晾 Pegline</title>
+<link rel="icon" href="favicon.png">
+<style>
+:root { --ink:#2a2233; --muted:#6f6479; --line:#f0e3ea; --rose:#e9538f;
+  --sys:-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:var(--sys); color:var(--ink); background:#fffaf7; line-height:1.75; -webkit-font-smoothing:antialiased; }
+.wrap { width:min(760px, 100% - 32px); margin:0 auto; padding:40px 0 72px; }
+a { color:var(--rose); }
+.back { display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:800; }
+.back img { width:30px; height:30px; border-radius:8px; }
+h1 { font-size:34px; margin:28px 0 4px; }
+.date { color:var(--muted); font-size:14px; margin:0 0 28px; }
+.tldr { background:#fff; border-radius:18px; padding:18px 22px; box-shadow:0 0 0 1px var(--line) inset; font-size:16px; }
+h2 { font-size:20px; margin:34px 0 8px; }
+p, li { color:var(--muted); font-size:15.5px; }
+ul { padding-left:20px; }
+code { background:#fff1f4; color:var(--rose); padding:2px 6px; border-radius:6px; font-size:13px; word-break:break-all; }
+hr { border:0; border-top:1px solid var(--line); margin:44px 0 24px; }
+.en h2 { font-size:18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html"><img src="icon.png" alt="">晾晾 Pegline</a>
+  <h1>隐私说明</h1>
+  <p class="date">更新于 2026 年 11 月</p>
+
+  <div class="tldr"><b>一句话：</b>晾晾不联网、不需要账号、不收集任何数据。你晾上去的东西只保存在你自己的电脑里，删掉就没了。</div>
+
+  <h2>晾晾会读取什么</h2>
+  <ul>
+    <li><b>剪贴板：</b>在你开着「自动收集」时，晾晾会在本机定时查看剪贴板，发现新的截图、复制的文件、文字或链接，就把它挂上绳子。你可以在设置里改成「只收截图」或「只靠拖拽」，后者完全不读剪贴板里的新内容。</li>
+    <li><b>Mac 截图文件夹：</b>在 Mac 上，用 ⌘⇧4 等系统快捷键截的图会存成文件，晾晾会留意这个文件夹里新出现的截图并挂上绳子（只看截图，不看别的文件）。</li>
+    <li><b>你拖进来的文件：</b>只有你主动拖上绳子、或复制后被收集的文件，晾晾才会读取并保存一份副本。</li>
+    <li><b>屏幕录制（仅 Mac，可选）：</b>用 ⌃⌥S 截图时调用系统截图工具，macOS 会询问一次权限。</li>
+  </ul>
+
+  <h2>东西存在哪里</h2>
+  <p>所有卡片和设置都存在你电脑上的晾晾数据文件夹里：</p>
+  <ul>
+    <li>Windows：<code>%APPDATA%\Pegline</code></li>
+    <li>Mac：<code>~/Library/Application Support/Pegline</code></li>
+  </ul>
+  <p>点卡片上的 ×、在菜单里「清空绳子」，或者卸载晾晾并删除这个文件夹，内容就会被删除。没有云端备份，我们也拿不到这些内容。</p>
+
+  <h2>不会做的事</h2>
+  <ul>
+    <li>不上传、不同步你的任何截图、文件或文字；</li>
+    <li>没有账号系统，不收集姓名、邮箱、设备标识；</li>
+    <li>没有广告、统计或崩溃上报 SDK；</li>
+    <li>不把任何数据卖给或分享给第三方。</li>
+  </ul>
+  <p>晾晾会在数据文件夹里写一份很小的本地日志（<code>pegline-debug.log</code>），只记录版本号和程序报错，方便排查问题，同样不会被发送出去。</p>
+
+  <h2>儿童</h2>
+  <p>晾晾不面向 13 岁以下儿童，也不会有意收集任何人的个人信息。</p>
+
+  <h2>变更</h2>
+  <p>如果以后加入了需要联网的功能（比如检查更新），我们会先更新这份说明，并在应用里告诉你。</p>
+
+  <hr>
+  <div class="en">
+    <h2>Privacy Policy (English)</h2>
+    <p>Pegline does not connect to the internet, has no accounts and collects no data. When automatic collection is on, it reads the clipboard locally to hang new screenshots, copied files, text and links on the rope; on macOS it also watches the system screenshot folder for new screenshots. Everything is stored only on your computer (<code>%APPDATA%\Pegline</code> on Windows, <code>~/Library/Application Support/Pegline</code> on macOS) and is deleted when you remove a card, clear the rope, or delete that folder. Pegline contains no analytics, advertising or crash-reporting SDKs and shares nothing with third parties. A small local log file (<code>pegline-debug.log</code>) records the version and errors and never leaves your computer. If a future version adds any network feature, this policy will be updated first.</p>
+  </div>
+</div>
+</body>
+</html>
