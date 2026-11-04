@@ -269,7 +269,7 @@ details ol { padding-left:20px; }
 code { font:13px var(--mono); background:var(--paper-2); padding:2px 6px; border-radius:4px; word-break:break-all; }
 @media (max-width:760px) { .faq { grid-template-columns:1fr; } }
 
-footer { padding:80px 0 0; overflow:hidden; border-top:1px solid var(--line); }
+footer { padding:40px 0 56px; overflow:hidden; border-top:1px solid var(--line); }
 footer .row { display:flex; flex-wrap:wrap; gap:12px 28px; color:var(--muted); font-size:14px; }
 footer .row a { text-decoration:none; }
 footer .row a:hover { color:var(--ink); }
@@ -390,6 +390,7 @@ footer .row .r { margin-left:auto; display:flex; gap:22px; }
   <blockquote class="reveal">
     <p>我每天要截很多图：报错、设计稿、聊天记录、验证码。截完往往马上就要用，用完又找不到，桌面上永远躺着几十张「截屏」。</p>
     <p>所以我在屏幕顶上拉了一根绳子，像在阳台上晾衣服一样，把这些东西先晾着。要用的时候一伸手就拿到，不要的就让它自己消失。</p>
+    <p>晾衣绳这个点子最早来自 Alejandro Buján 的开源 macOS 应用 <a href="https://github.com/alejandrobujan/tendedero" target="_blank" rel="noopener">Tendedero</a>。晾晾是受它启发、从头写的 Windows 和 Mac 版本，又加上了 PDF 翻页、虚影模式、左右两边挂绳和七套皮肤。</p>
     <cite>— Tao，做晾晾的人</cite>
   </blockquote>
 </div></section>
@@ -417,8 +418,7 @@ footer .row .r { margin-left:auto; display:flex; gap:22px; }
 </div></section>
 
 <footer><div class="wrap">
-  <div class="row"><span class="mono" id="footVer"></span><div class="r"><a href="privacy.html">隐私说明</a><a href="https://github.com/LXTTT0323/pegline/releases">所有版本</a><a href="#help">安装帮助</a></div></div>
-  <div class="giant">晾晾<i>Pegline</i></div>
+  <div class="row"><span class="mono" id="footVer"></span><span>灵感来自开源项目 <a href="https://github.com/alejandrobujan/tendedero" target="_blank" rel="noopener">Tendedero</a>（Alejandro Buján · MIT）</span><div class="r"><a href="privacy.html">隐私说明</a><a href="https://github.com/LXTTT0323/pegline/releases">所有版本</a><a href="#help">安装帮助</a></div></div>
 </div></footer>
 
 <script>
