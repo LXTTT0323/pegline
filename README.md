@@ -10,7 +10,7 @@
   <a href="https://github.com/LXTTT0323/pegline/releases/latest"><img src="https://img.shields.io/github/v/release/LXTTT0323/pegline?label=%E7%89%88%E6%9C%AC&color=171614" alt="版本"></a>
   <a href="https://github.com/LXTTT0323/pegline/releases"><img src="https://img.shields.io/github/downloads/LXTTT0323/pegline/total?label=%E4%B8%8B%E8%BD%BD&color=e2462a" alt="下载次数"></a>
   <img src="https://img.shields.io/badge/%E5%B9%B3%E5%8F%B0-Windows%20%7C%20macOS-3b3833" alt="平台">
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/LXTTT0323/pegline?label=%E8%AE%B8%E5%8F%AF&color=3b3833" alt="MIT"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-MIT-3b3833" alt="MIT"></a>
 </p>
 
 <p align="center">
