@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>隐私说明 · 晾晾 Pegline</title>
 <link rel="icon" href="favicon.png">
+<link rel="alternate" hreflang="en" href="https://lxttt0323.github.io/pegline/en/privacy.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap">
@@ -30,13 +31,19 @@ p, li { color:var(--ink-2); }
 ul { padding-left:20px; }
 li { margin-bottom:6px; }
 code { font:13px var(--mono); background:var(--paper-2); padding:2px 6px; border-radius:4px; word-break:break-all; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.lang { display:inline-flex; align-items:center; height:32px; padding:0 12px; border:1px solid var(--line); border-radius:999px; font:600 13px var(--sans); color:var(--ink-2); text-decoration:none; }
+.lang:hover { border-color:var(--ink); color:var(--ink); }
 .en { margin-top:56px; padding-top:24px; border-top:1px solid var(--line); }
 .en h2 { font:italic 400 26px var(--latin); }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <a class="mark" href="./"><b>晾晾</b><i>Pegline</i></a>
+  <div class="top">
+    <a class="mark" href="./"><b>晾晾</b><i>Pegline</i></a>
+    <a class="lang" href="en/privacy.html" data-lang="en" lang="en" title="Switch to English">EN</a>
+  </div>
   <h1>隐私说明</h1>
   <p class="date">更新于 2026.11 · 适用于 v1.5.0</p>
 
@@ -78,5 +85,6 @@ code { font:13px var(--mono); background:var(--paper-2); padding:2px 6px; border
     <p>Pegline does not connect to the internet, has no accounts and collects no data. When automatic collection is on, it reads the clipboard locally to hang new screenshots, copied files, text and links on the rope; on macOS it also watches the system screenshot folder for new screenshots. Everything is stored only on your computer (<code>%APPDATA%\Pegline</code> on Windows, <code>~/Library/Application Support/Pegline</code> on macOS) and is deleted when you remove a card, clear the rope, or delete that folder. Pegline contains no analytics, advertising or crash-reporting SDKs and shares nothing with third parties. A small local log file (<code>pegline-debug.log</code>) records the version and errors and never leaves your computer. If a future version adds any network feature, this policy will be updated first.</p>
   </div>
 </div>
+<script>document.querySelectorAll('[data-lang]').forEach(a => a.addEventListener('click', () => { try { localStorage.setItem('pg-lang', a.dataset.lang); } catch (e) {} }));</script>
 </body>
 </html>

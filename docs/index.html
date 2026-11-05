@@ -3,12 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>/* visitors whose browser isn't Chinese land on the English page, unless they picked a language before */
+try { if (!localStorage.getItem('pg-lang') && !/^zh/i.test(navigator.language || '') && !/bot|crawl|spider/i.test(navigator.userAgent)) location.replace('en/' + location.hash); } catch (e) {}</script>
 <title>晾晾 Pegline · 截图，先晾着</title>
 <meta name="description" content="屏幕顶上的一根绳子。截图、图片、PDF、视频、文档、文件夹、文字、链接都能挂上去；单击复制，按住拖进聊天、邮件、文档或任意文件夹。Windows / macOS，免费，不联网。">
 <meta property="og:title" content="晾晾 Pegline · 截图，先晾着">
 <meta property="og:description" content="屏幕顶上的一根绳子，截图、文件、文字随手晾着。免费，不联网。">
 <meta property="og:image" content="https://lxttt0323.github.io/pegline/skin-day.jpg">
 <link rel="icon" href="favicon.png">
+<link rel="alternate" hreflang="zh" href="https://lxttt0323.github.io/pegline/">
+<link rel="alternate" hreflang="en" href="https://lxttt0323.github.io/pegline/en/">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +57,9 @@ nav .links a:hover { color:var(--accent); }
 .btn.line:hover { background:var(--paper-2); }
 .btn svg { width:17px; height:17px; flex:none; }
 nav .btn { height:36px; font-size:14px; padding:0 14px; }
-@media (max-width:760px) { nav .links { display:none; } nav .btn { margin-left:auto; } }
+.lang { display:inline-flex; align-items:center; height:32px; padding:0 12px; margin-right:-12px; border:1px solid var(--line); border-radius:999px; font:600 13px var(--sans); color:var(--ink-2); text-decoration:none; transition:border-color .15s, color .15s; }
+.lang:hover { border-color:var(--ink); color:var(--ink); }
+@media (max-width:760px) { nav .links { display:none; } nav .lang { margin-left:auto; } }
 
 /* ---------- hero ---------- */
 .hero { padding:56px 0 0; }
@@ -326,6 +332,7 @@ footer .row .r { margin-left:auto; display:flex; gap:22px; }
 <nav id="nav"><div class="wrap">
   <a class="mark" href="#"><b>晾晾</b><i>Pegline</i></a>
   <div class="links"><a href="#demo">演示</a><a href="#moments">怎么用</a><a href="#skins">皮肤</a><a href="#privacy">隐私</a><a href="#help">安装帮助</a></div>
+  <a class="lang" href="en/" data-lang="en" lang="en" title="Switch to English">EN</a>
   <a class="btn dark" href="#download" id="navDl">下载</a>
 </div></nav>
 
@@ -480,10 +487,12 @@ footer .row .r { margin-left:auto; display:flex; gap:22px; }
 </div></section>
 
 <footer><div class="wrap">
-  <div class="row"><span class="mono" id="footVer"></span><span>灵感来自开源项目 <a href="https://github.com/alejandrobujan/tendedero" target="_blank" rel="noopener">Tendedero</a>（Alejandro Buján · MIT）</span><div class="r"><a href="privacy.html">隐私说明</a><a href="https://github.com/LXTTT0323/pegline/releases">所有版本</a><a href="#help">安装帮助</a></div></div>
+  <div class="row"><span class="mono" id="footVer"></span><span>灵感来自开源项目 <a href="https://github.com/alejandrobujan/tendedero" target="_blank" rel="noopener">Tendedero</a>（Alejandro Buján · MIT）</span><div class="r"><a href="privacy.html">隐私说明</a><a href="https://github.com/LXTTT0323/pegline/releases">所有版本</a><a href="#help">安装帮助</a><a href="en/" data-lang="en" lang="en">English</a></div></div>
 </div></footer>
 
 <script>
+/* remember the language someone picked, so the auto-switch never overrides it */
+document.querySelectorAll('[data-lang]').forEach(a => a.addEventListener('click', () => { try { localStorage.setItem('pg-lang', a.dataset.lang); } catch (e) {} }));
 /* ===== the only place to edit when a new version ships ===== */
 const RELEASE = {
   version: '1.5.0', date: '2026.11',
