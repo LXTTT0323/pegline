@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Pegline</title>
+<meta name="description" content="Pegline works offline, has no accounts and collects no data.">
+<link rel="icon" href="../favicon.png">
+<link rel="alternate" hreflang="zh" href="https://lxttt0323.github.io/pegline/privacy.html">
+<link rel="alternate" hreflang="en" href="https://lxttt0323.github.io/pegline/en/privacy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Serif+4:opsz,wght@8..60,700;8..60,900&display=swap">
+<style>
+:root { --paper:#f3f1ec; --paper-2:#ebe8e1; --ink:#171614; --ink-2:#3b3833; --muted:#6f6a61; --line:#dcd7cd; --accent:#e2462a;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif; --latin:"Instrument Serif", Georgia, serif;
+  --sans:-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono:ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.75 var(--sans); -webkit-font-smoothing:antialiased; }
+.wrap { width:min(760px, 100% - 40px); margin:0 auto; padding:28px 0 90px; }
+a { color:inherit; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.mark { display:inline-flex; align-items:baseline; gap:8px; text-decoration:none; }
+.mark b { font:900 22px/1 var(--serif); }
+.mark i { font:500 15px/1 var(--sans); font-style:normal; color:var(--muted); }
+.lang { display:inline-flex; align-items:center; height:32px; padding:0 12px; border:1px solid var(--line); border-radius:999px; font:600 13px var(--sans); color:var(--ink-2); text-decoration:none; }
+.lang:hover { border-color:var(--ink); color:var(--ink); }
+h1 { font:900 clamp(40px, 7vw, 68px)/1.05 var(--serif); letter-spacing:-.025em; margin:64px 0 8px; }
+.date { font:12.5px var(--mono); color:var(--muted); margin:0 0 36px; }
+.tldr { font:700 22px/1.5 var(--serif); border-top:1px solid var(--ink); border-bottom:1px solid var(--line); padding:22px 0; margin:0 0 20px; }
+.tldr em { font-style:normal; color:var(--accent); }
+h2 { font:700 21px/1.4 var(--serif); margin:40px 0 8px; }
+p, li { color:var(--ink-2); }
+ul { padding-left:20px; }
+li { margin-bottom:6px; }
+code { font:13px var(--mono); background:var(--paper-2); padding:2px 6px; border-radius:4px; word-break:break-all; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="mark" href="./"><b>Pegline</b><i>晾晾</i></a>
+    <a class="lang" href="../privacy.html" data-lang="zh" lang="zh" title="切换到中文">中文</a>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p class="date">Updated 2026.11 · applies to v1.5.0</p>
+
+  <p class="tldr">Pegline <em>works offline, has no accounts and collects no data</em>. What you hang on the line stays on your own computer, and it’s gone once you delete it.</p>
+
+  <h2>What Pegline reads</h2>
+  <ul>
+    <li><b>Clipboard:</b> while automatic collection is on, Pegline checks the clipboard on your computer from time to time and hangs new screenshots, copied files, text or links on the line. Switch to “screenshots only” or “drag only” in settings to collect less; with “drag only” it ignores new clipboard content completely.</li>
+    <li><b>Mac screenshot folder:</b> screenshots taken with system shortcuts such as ⌘⇧4 are saved as files. Pegline watches that folder for new screenshots and hangs them on the line. It looks at screenshots only, nothing else.</li>
+    <li><b>Files you give it:</b> Pegline reads and keeps a copy of a file only when you drag it onto the line, or when you copy it while collection is on.</li>
+    <li><b>Screen recording (Mac only, optional):</b> the ⌃⌥S shortcut uses the system screenshot tool, so macOS asks for permission once.</li>
+  </ul>
+
+  <h2>Where your things are kept</h2>
+  <p>All cards and settings are stored in Pegline’s data folder on your computer:</p>
+  <ul>
+    <li>Windows: <code>%APPDATA%\Pegline</code></li>
+    <li>Mac: <code>~/Library/Application Support/Pegline</code></li>
+  </ul>
+  <p>Click × on a card, choose “Clear the line” in the menu, or uninstall Pegline and delete that folder, and the content is gone. There is no cloud backup, and nobody else can see what you hang.</p>
+
+  <h2>What Pegline never does</h2>
+  <ul>
+    <li>Upload or sync any of your screenshots, files or text.</li>
+    <li>Ask for an account, or collect names, email addresses or device IDs.</li>
+    <li>Show ads, or include analytics or crash reporting.</li>
+    <li>Sell or share any data with third parties.</li>
+  </ul>
+  <p>Pegline writes a small local log (<code>pegline-debug.log</code>) in its data folder. It records only the version number and errors, to help track down bugs, and it never leaves your computer either.</p>
+
+  <h2>Children</h2>
+  <p>Pegline isn’t aimed at children under 13 and doesn’t knowingly collect personal information from anyone.</p>
+
+  <h2>Changes</h2>
+  <p>If a future version adds anything that goes online, such as checking for updates, this policy will be updated first and the app will tell you.</p>
+</div>
+<script>document.querySelectorAll('[data-lang]').forEach(a => a.addEventListener('click', () => { try { localStorage.setItem('pg-lang', a.dataset.lang); } catch (e) {} }));</script>
+</body>
+</html>
